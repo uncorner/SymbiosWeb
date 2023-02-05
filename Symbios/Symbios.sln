@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symbios", "Symbios\Symbios.csproj", "{181CFF8B-4EE6-4DCC-9560-DA812C2E4212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{A3F5A463-EC30-40D8-86C6-CE6F0BE67962}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreTest", "CoreTest\CoreTest.csproj", "{BCD37905-41FC-4258-93CC-92B7C0D7FDF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1C3BCBD-5F4B-43EE-93B6-BF1712B71DC1}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Symbios.vsmdi = Symbios.vsmdi
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Symbios.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{181CFF8B-4EE6-4DCC-9560-DA812C2E4212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{181CFF8B-4EE6-4DCC-9560-DA812C2E4212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{181CFF8B-4EE6-4DCC-9560-DA812C2E4212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{181CFF8B-4EE6-4DCC-9560-DA812C2E4212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F5A463-EC30-40D8-86C6-CE6F0BE67962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F5A463-EC30-40D8-86C6-CE6F0BE67962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F5A463-EC30-40D8-86C6-CE6F0BE67962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F5A463-EC30-40D8-86C6-CE6F0BE67962}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD37905-41FC-4258-93CC-92B7C0D7FDF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD37905-41FC-4258-93CC-92B7C0D7FDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD37905-41FC-4258-93CC-92B7C0D7FDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD37905-41FC-4258-93CC-92B7C0D7FDF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="Symbios.Template" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <link type="text/css" rel="Stylesheet" href="~/Style/Symbios.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="layout-container">
+        <table id="layout">
+            <tr>
+                <td id="layout-header" colspan="2">
+                    <table id="header-box">
+                        <tr>                        
+                            <td class="logo-container" rowspan="2">
+                                <a href="~/" runat="server">
+                                    <img id="Img1" runat="server" src="~/Images/logo.jpg" alt="Логотип"/>
+                                </a>
+                            </td>
+                            <td class="description-container">
+                                <div id="description-box">
+                                    <span class="r1"></span>
+                                    <span class="r2"></span>
+                                    <span class="r3"></span>
+                                    <div class="content">
+                                        <strong>Symbios</strong> — это онлайн-хранилище разнообразных полезных и развлекательных приложений для смартфона <a href="http://www.nokia.ru/products/phones/nokia-5230">Nokia 5230</a>
+                                    </div>
+                                    <span class="r3"></span>
+                                    <span class="r2"></span>
+                                    <span class="r1"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu-container">
+                                <asp:PlaceHolder ID="mainMenuPlaceHolder" runat="server">
+                                </asp:PlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td id="layout-sidebar">
+                    <div id="menu-box">
+                        <asp:Menu ID="menu" runat="server" >
+                        </asp:Menu>
+                    </div>
+                    <div id="search-box">
+                        <table>
+                            <tr>
+                                <td>
+                                    <asp:TextBox ID="searchTextBox" runat="server"></asp:TextBox>
+                                </td>
+                                <td class="submit">
+                                    <asp:Button ID="searchButton" runat="server" Text="Искать" 
+                                        onclick="searchButton_Click" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <asp:RequiredFieldValidator ID="searchRequiredFieldValidator" runat="server" 
+                                            ControlToValidate="searchTextBox" 
+                                            ErrorMessage="Введите фразу для поиска" Display="Dynamic"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td id="layout-content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td id="layout-footer" colspan="2">
+                    <span>&copy; 2011 Symbios Lab </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

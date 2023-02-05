@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Symbios">
+  <DataContextMoniker Name="/SymbiosDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8adf7b93-661f-4ebd-80de-cb33a4d2a868" absoluteBounds="0.75, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/SymbiosDataContext/AppFile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fef59fb0-fd71-43ac-b705-9530541b47b9" absoluteBounds="0.765, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="84bafaa3-91ac-4414-b018-e0ce773a40d2" absoluteBounds="0.75, 6.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/SymbiosDataContext/Screenshot" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e86bdb7b-ed78-454f-addd-65c359d94111" absoluteBounds="0.765, 6.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72a68e3d-5c6c-4bcf-8328-e74a5f4f8d6e" absoluteBounds="0.75, 1.5, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/SymbiosDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f4c8db1-a75c-4dd9-9c5e-9b3cde107eb1" absoluteBounds="0.765, 1.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="59aaff9c-d019-4152-b67a-be36274b9b17" absoluteBounds="3.5, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SymbiosDataContext/App" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04f63bab-a179-46a5-8d58-e9c7cd2c7f5f" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.25); (3.125 : 3.875); (3.125 : 1.62944461458333); (3.5 : 1.62944461458333)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SymbiosDataContext/AppFile/AppFile_App" />
+      <nodes>
+        <classShapeMoniker Id="8adf7b93-661f-4ebd-80de-cb33a4d2a868" />
+        <classShapeMoniker Id="59aaff9c-d019-4152-b67a-be36274b9b17" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.32139322916667); (3.04166666666667 : 2.32139322916667 : JumpStart); (3.20833333333333 : 2.32139322916667 : JumpEnd); (3.5 : 2.32139322916667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SymbiosDataContext/Category/Category_App" />
+      <nodes>
+        <classShapeMoniker Id="72a68e3d-5c6c-4bcf-8328-e74a5f4f8d6e" />
+        <classShapeMoniker Id="59aaff9c-d019-4152-b67a-be36274b9b17" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.40625); (3.59375 : 6.40625); (3.59375 : 3.34780110677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SymbiosDataContext/Screenshot/Screenshot_App" />
+      <nodes>
+        <classShapeMoniker Id="84bafaa3-91ac-4414-b018-e0ce773a40d2" />
+        <classShapeMoniker Id="59aaff9c-d019-4152-b67a-be36274b9b17" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="16168ad9-b743-470f-92f0-f2aa260fb1f3" absoluteBounds="3.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/SymbiosDataContext/Planet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ce3a68a-e99d-4715-9033-8d756b212019" absoluteBounds="3.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d5393d3-4013-4ca2-8a7a-86e007c27a25" absoluteBounds="4, 6.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SymbiosDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da8a0c56-2e47-44fa-aa1d-b9737b3dda67" absoluteBounds="4.0150000000000006, 6.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

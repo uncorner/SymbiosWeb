@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Symbios" EntityNamespace="Symbios.Core.Models" Class="SymbiosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=Symbios;Integrated Security=True" SettingsObjectName="Symbios.Core.Properties.Settings" SettingsPropertyName="SymbiosConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AppFiles" Member="AppFiles">
+    <Type Name="AppFile">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FileData" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FileName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="AppFile_App" Member="Apps" ThisKey="Id" OtherKey="FileId" Type="App" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Screenshots" Member="Screenshots">
+    <Type Name="Screenshot">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ImageData" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ThumbData" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Screenshot_App" Member="Apps" ThisKey="Id" OtherKey="ScreenshotId" Type="App" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Categories" Member="Categories">
+    <Type Name="Category">
+      <Column Name="Tag" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Category_App" Member="Apps" ThisKey="Tag" OtherKey="CategoryTag" Type="App" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Apps" Member="Apps">
+    <Type Name="App">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(800)" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CategoryTag" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ScreenshotId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FileId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="AppFile_App" Member="AppFile" ThisKey="FileId" OtherKey="Id" Type="AppFile" IsForeignKey="true" />
+      <Association Name="Category_App" Member="Category" ThisKey="CategoryTag" OtherKey="Tag" Type="Category" IsForeignKey="true" />
+      <Association Name="Screenshot_App" Member="Screenshot" ThisKey="ScreenshotId" OtherKey="Id" Type="Screenshot" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Planets" Member="Planets">
+    <Type Name="Planet">
+      <Column Name="Name" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
